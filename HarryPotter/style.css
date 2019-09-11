@@ -1,0 +1,325 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PopLight;
+  src: url("./fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: PopRegular;
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+body {
+  font-family: PopLight;
+}
+
+.harry_potter {
+  color: white;
+  background: radial-gradient(rgba(138, 110, 255, 1), rgba(20, 18, 18, 1));
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.page {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+.hp2,
+.hp3 {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero {
+  overflow: hidden;
+  height: 500px;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+}
+
+.hero img {
+  height: 500px;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+
+.hero a {
+  display: flex;
+}
+
+.model-right {
+  transform: translate(0%, 10%);
+}
+
+.model-left {
+  transform: translate(0%, -10%);
+}
+
+.hero:hover .model-left {
+  transform: translate(0%, 0%);
+}
+
+.hero:hover .model-right {
+  transform: translate(0%, 0%);
+}
+
+.details {
+  grid-column: 2/3;
+  align-self: end;
+}
+
+.details h1 {
+  font-size: 35px;
+  font-family: PopRegular;
+}
+
+.details h2 {
+  font-size: 35px;
+}
+
+.details h3 {
+  font-size: 35px;
+}
+
+.details p {
+  font-size: 24px;
+  padding: 20px 0px 50px 0px;
+}
+
+.pages {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+.pages > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pages h3 {
+  font-size: 24px;
+  padding: 30px;
+}
+
+.pages svg {
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(2);
+}
+
+.pages svg:hover {
+  animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.pages svg.active {
+  opacity: 1;
+}
+
+@keyframes dot {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(4);
+  }
+}
+
+/*CSS code for hp1,hp2&hp3 below*/
+
+.banner {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.author {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  bottom: 20%;
+  transform: translate(-10%, -70%);
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: end;
+}
+
+.author h1 {
+  font-size: 35px;
+}
+
+.author h2 {
+  font-size: 35px;
+  padding: 0px 0px;
+}
+
+.Harry-pot {
+  color: white;
+  background: radial-gradient(rgba(138, 110, 255, 1), rgba(20, 18, 18, 1));
+}
+
+.Harry-pot2 {
+  color: white;
+  background: radial-gradient(rgba(116, 164, 90, 1), rgba(51, 71, 40, 1));
+}
+
+.Harry-pot3 {
+  color: white;
+  background: radial-gradient(rgba(240, 140, 55, 1), rgba(120, 70, 28, 1));
+}
+
+.story-description h3 {
+  padding-top: 60px;
+}
+
+.story-description h3,
+.work-description h3 {
+  color: rgb(255, 250, 250);
+  font-size: 50px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.work-description {
+  padding-bottom: 20px;
+}
+
+.story-description p,
+.work-description p {
+  padding-left: 50px;
+  width: 60%;
+  padding-bottom: 2%;
+}
+
+.gall1,
+.gall2,
+.gall3,
+.gall4,
+.gall5 {
+  width: 200px;
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  position: inherit;
+  place-self: center;
+  padding-left: 200px;
+  padding-bottom: 40px;
+}
+
+.jkr {
+  width: 500px;
+  position: absolute;
+  top: 110%;
+  right: 0%;
+  padding-right: 50px;
+}
+
+.nav-open {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  z-index: 1;
+  color: black;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+.contact {
+  grid-column: 2/3;
+}
+
+.nav-open h3 {
+  font-size: 28px;
+  padding-bottom: 40px;
+}
+
+.nav-open p {
+  font-size: 18px;
+}
+
+.social-links img {
+  padding: 0px 20px;
+}
+
+.logo,
+.menu {
+  z-index: 2;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.button {
+  color: #fff;
+  font-weight: normal;
+  text-justify: auto;
+  font-family: PopLight;
+  position: absolute;
+  top: 75%;
+  left: 3%;
+  border: 10%;
+  align-self: center;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  padding: 30px, 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  font-size: 24px;
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+}
+
+.button:hover {
+  color: rgb(0, 0, 0);
+  background: #eeeeee;
+  font-weight: bold;
+}
